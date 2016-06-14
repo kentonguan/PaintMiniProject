@@ -29,12 +29,6 @@ public class PaintActivity extends AppCompatActivity {
 
     @BindView(R.id.blank_canvas_view)
     BlankCanvasView blankCanvasView;
-    @BindView(R.id.delete_fab)
-    FloatingActionButton deleteFloatingActionButton;
-    @BindView(R.id.erase_fab)
-    FloatingActionButton eraseFloatingActionButton;
-    @BindView(R.id.color_change_fab)
-    FloatingActionButton colorChangeFloatingActionButton;
     @BindView(R.id.color_palette_layout)
     LinearLayout colorPaletteLayout;
     @BindView(R.id.edit_tools_layout)
