@@ -12,10 +12,139 @@
         android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
-        android:src="@drawable/ic_more_vert_black_24dp"
+        android:id="@+id/edit_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/blank_canvas_view"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        tools:ignore="RelativeOverlap" />
+
+
+    <LinearLayout
+        android:id="@+id/edit_tools_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/edit_fab"
+        android:orientation="horizontal">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/delete_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_24dp"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/erase_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eraser_24dp"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/stroke_width_change_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pencil"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/color_change_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_palette_black_24dp"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+
+    </LinearLayout>
+
+
+    <SeekBar
+        android:id="@+id/stroke_width_seekbar"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:rotation="270"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/color_palette_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/edit_tools_layout"
+        android:layout_alignRight="@id/edit_tools_layout"
+        android:orientation="vertical">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/red_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_red"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/orange_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_orange"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/yellow_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_yellow"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/green_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_green"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/blue_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_blue"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/purple_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_purple"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/black_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_black"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/seekbar_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
 
 </RelativeLayout>
