@@ -60,6 +60,15 @@ public class BlankCanvasView extends View {
         }
     }
 
+    public void initPaint() {
+        paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeJoin(Paint.Join.ROUND);
+        paint.setStrokeCap(Paint.Cap.ROUND);
+        paint.setColor(Color.BLACK);
+    }
+
     public void clear() {
         pathContainers.clear();
         pathContainers.add(createNewPathContainer());
@@ -74,15 +83,6 @@ public class BlankCanvasView extends View {
     public void setStrokeColor(int color) {
         paint.setColor(color);
         pathContainers.add(createNewPathContainer());
-    }
-
-    public void initPaint() {
-        paint = new Paint();
-        paint.setAntiAlias(true);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeJoin(Paint.Join.ROUND);
-        paint.setStrokeCap(Paint.Cap.ROUND);
-        paint.setColor(Color.BLACK);
     }
 
     public PathContainer createNewPathContainer() {

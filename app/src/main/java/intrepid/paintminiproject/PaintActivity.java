@@ -18,9 +18,9 @@ import intrepid.paintminiproject.Views.BlankCanvasView;
 
 public class PaintActivity extends AppCompatActivity {
     private static final int SEEKBAR_PROGRESS_OFFSET = 1;
-    public static final int SEEKBAR_X_OFFSET = 40;
-    public static final int SEEKBAR_Y_OFFSET = 170;
-    public static final int SEEKBAR_PROGRESS_MAX = 99;
+    private static final int SEEKBAR_X_OFFSET = 40;
+    private static final int SEEKBAR_Y_OFFSET = 170;
+    private static final int SEEKBAR_PROGRESS_MAX = 99;
 
     Boolean isEditMenuOpened;
     Boolean isColorPaletteOpened;
@@ -109,7 +109,6 @@ public class PaintActivity extends AppCompatActivity {
                 blankCanvasView.setStrokeColor(Color.BLACK);
                 break;
         }
-
         closeAllMenus();
     }
 
@@ -190,10 +189,7 @@ public class PaintActivity extends AppCompatActivity {
         isSeekBarOpened = true;
         isEditMenuOpened = true;
         isColorPaletteOpened = true;
-        isInEraseMode = false;
         colorPaletteList = colorPaletteLayout.getTouchables();
         editMenuList = editToolsLayout.getTouchables();
     }
-
-
 }
