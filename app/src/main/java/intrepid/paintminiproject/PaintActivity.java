@@ -1,5 +1,7 @@
 package intrepid.paintminiproject;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -25,7 +27,6 @@ public class PaintActivity extends AppCompatActivity {
     Boolean isEditMenuOpened;
     Boolean isColorPaletteOpened;
     Boolean isSeekBarOpened;
-    Boolean isInEraseMode;
 
     @BindView(R.id.blank_canvas_view)
     BlankCanvasView blankCanvasView;
@@ -49,6 +50,11 @@ public class PaintActivity extends AppCompatActivity {
         initFields();
         initSeekBar();
         closeAllMenus();
+    }
+
+    public static void start(Context context) {
+        Intent starter = new Intent(context, PaintActivity.class);
+        context.startActivity(starter);
     }
 
     @OnClick(R.id.delete_fab)

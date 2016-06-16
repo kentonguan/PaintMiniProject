@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.start_button)
     public void startPaintActivity() {
-        Intent intent = new Intent(this, PaintActivity.class);
-        startActivity(intent);
+        PaintActivity.start(this);
     }
 }
